@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="quiz.css" rel="stylesheet" />
+    <title>MATCHAT - Quizz</title>
+    <link rel="icon" href="logoMatchatFull.png" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <img
+        id="matchatLogo"
+        src="https://i.imgur.com/zWkTGqX.png"
+        alt="matchatLogo"
+      />
+      <ul id="navList">
+        <li class="navElement"><a href="accueil.html">Accueil</a></li>
+        <li class="navElement"><a href="vente.html">Produits</a></li>
+        <li class="navElement"><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <p id="pseudo"></p>
+    <div id="result-hero"></div>
+    <h1>Quel matcha es-tu ?</h1>
+
+    <!-- Q1 -->
+    <fieldset>
+      <legend>Quelle odeur préfères-tu ?</legend>
+      <label
+        ><input
+          type="radio"
+          name="q0"
+          data-scores='{"matcha ananas":2,"matcha gingembre":1}'
+        />
+        D'un livre neuf.</label
+      ><br />
+      <label
+        ><input
+          type="radio"
+          name="q0"
+          data-scores='{"matcha fraise":2,"matcha pêche blanche":1}'
+        />
+        Du café.</label
+      ><br />
+      <label
+        ><input
+          type="radio"
+          name="q0"
+          data-scores='{"matcha pomme":2,"matcha classique":1}'
+        />
+        Des fleurs.</label
+      ><br />
+      <label
+        ><input
+          type="radio"
+          name="q0"
+          data-scores='{"matcha betterave":2,"matcha myrtille":1}'
+        />
+        De la pluie.</label
+      >
+    </fieldset>
+
+    <!-- Q2 -->
+    <fieldset>
+      <legend>Ta saison préférée ?</legend>
+      <label
+        ><input
+          type="radio"
+          name="q1"
+          data-scores='{"matcha mangue":2,"matcha ananas":1}'
+        />
+        Été</label
+      ><br />
+      <label
+        ><input
+          type="radio"
+          name="q1"
+          data-scores='{"matcha pêche blanche":2,"matcha classique":1}'
+        />
+        Hiver</label
+      ><br />
+      <label
+        ><input
+          type="radio"
+          name="q1"
+          data-scores='{"matcha poire":2,"matcha myrtille":1}'
+        />
+        Automne</label
+      ><br />
+      <label
+        ><input
+          type="radio"
+          name="q1"
+          data-scores='{"matcha framboise":2,"matcha carotte":1}'
+        />
+        Printemps</label
+      >
+    </fieldset>
+
+    <!-- Q3 -->
+    <fieldset>
+      <legend>Tu es plutôt...</legend>
+      <label
+        ><input
+          type="radio"
+          name="q2"
+          data-scores='{"matcha poire":2,"matcha classique":1}'
+        />
+        Aube et matin.</label
+      ><br />
+      <label
+        ><input
+          type="radio"
+          name="q2"
+          data-scores='{"matcha betterave":2,"matcha fraise":1}'
+        />
+        Après-midi.</label
+      ><br />
+      <label
+        ><input
+          type="radio"
+          name="q2"
+          data-scores='{"matcha gingembre":2,"matcha ananas":1}'
+        />
+        Couché de soleil et crépuscule.</label
+      ><br />
+      <label
+        ><input
+          type="radio"
+          name="q2"
+          data-scores='{"matcha mangue":2,"matcha pomme":1}'
+        />
+        Nuit.</label
+      >
+    </fieldset>
+
+    <!-- Q4 -->
+    <fieldset>
+      <legend>À quel endroit préfères-tu vivre ?</legend>
+      <label
+        ><input
+          type="radio"
+          name="q3"
+          data-scores='{"matcha mangue":2,"matcha ananas":1}'
+        />
+        La plage et le soleil.</label
+      ><br />
+      <label
+        ><input
+          type="radio"
+          name="q3"
+          data-scores='{"matcha betterave":2,"matcha framboise":1}'
+        />
+        En ville.</label
+      ><br />
+      <label
+        ><input
+          type="radio"
+          name="q3"
+          data-scores='{"matcha poire":2,"matcha myrtille":1}'
+        />
+        À la campagne calme.</label
+      ><br />
+      <label
+        ><input
+          type="radio"
+          name="q3"
+          data-scores='{"matcha pomme":2,"matcha classique":1}'
+        />
+        À la montagne.</label
+      >
+    </fieldset>
+
+    <!-- Q5 -->
+    <fieldset>
+      <legend>Ta boisson préférée ?</legend>
+      <label
+        ><input
+          type="radio"
+          name="q4"
+          data-scores='{"matcha classique":2,"matcha pêche blanche":1}'
+        />
+        L'eau plate et pétillante.</label
+      ><br />
+      <label
+        ><input
+          type="radio"
+          name="q4"
+          data-scores='{"matcha framboise":2,"matcha mangue":1}'
+        />
+        Le café et le thé.</label
+      ><br />
+      <label
+        ><input
+          type="radio"
+          name="q4"
+          data-scores='{"matcha poire":2,"matcha myrtille":1}'
+        />
+        Le lait.</label
+      ><br />
+      <label
+        ><input
+          type="radio"
+          name="q4"
+          data-scores='{"matcha carotte":2,"matcha betterave":1}'
+        />
+        Le soda et les limonades.</label
+      >
+    </fieldset>
+
+    <!-- Q6 -->
+    <fieldset>
+      <legend>Ton moyen de transport préféré ?</legend>
+      <label
+        ><input
+          type="radio"
+          name="q5"
+          data-scores='{"matcha ananas":2,"matcha gingembre":1}'
+        />
+        Les trains et le cheval.</label
+      ><br />
+      <label
+        ><input
+          type="radio"
+          name="q5"
+          data-scores='{"matcha poire":2,"matcha fraise":1}'
+        />
+        La voiture ou à pieds.</label
+      ><br />
+      <label
+        ><input
+          type="radio"
+          name="q5"
+          data-scores='{"matcha betterave":2,"matcha framboise":1}'
+        />
+        L'avion ou l'hélicoptère.</label
+      ><br />
+      <label
+        ><input
+          type="radio"
+          name="q5"
+          data-scores='{"matcha pomme":2,"matcha classique":1}'
+        />
+        Le bateau ou le sous-marin.</label
+      >
+    </fieldset>
+
+    <!-- Q7 -->
+    <fieldset>
+      <legend>Ton chocolat préféré ?</legend>
+      <label
+        ><input
+          type="radio"
+          name="q6"
+          data-scores='{"matcha carotte":2,"matcha mangue":1}'
+        />
+        Chocolat au lait.</label
+      ><br />
+      <label
+        ><input
+          type="radio"
+          name="q6"
+          data-scores='{"matcha pêche blanche":2,"matcha classique":1}'
+        />
+        Chocolat blanc.</label
+      ><br />
+      <label
+        ><input
+          type="radio"
+          name="q6"
+          data-scores='{"matcha gingembre":2,"matcha ananas":1}'
+        />
+        Je n'aime pas le chocolat.</label
+      ><br />
+      <label
+        ><input
+          type="radio"
+          name="q6"
+          data-scores='{"matcha poire":2,"matcha myrtille":1}'
+        />
+        Chocolat noir.</label
+      >
+    </fieldset>
+
+    <!-- Q8 -->
+    <fieldset>
+      <legend>Une soirée idéale pour toi ?</legend>
+      <label
+        ><input
+          type="radio"
+          name="q7"
+          data-scores='{"matcha ananas":2,"matcha framboise":1}'
+        />
+        Entre amis bruyants.</label
+      ><br />
+      <label
+        ><input
+          type="radio"
+          name="q7"
+          data-scores='{"matcha myrtille":2,"matcha poire":1}'
+        />
+        Seul avec un film ou une série.</label
+      ><br />
+      <label
+        ><input
+          type="radio"
+          name="q7"
+          data-scores='{"matcha pêche blanche":2,"matcha classique":1}'
+        />
+        Petit dîner chic ou UberEats.</label
+      ><br />
+      <label
+        ><input
+          type="radio"
+          name="q7"
+          data-scores='{"matcha betterave":2,"matcha carotte":1}'
+        />
+        Jam session ou création.</label
+      >
+    </fieldset>
+
+    <!-- Q9 -->
+    <fieldset>
+      <legend>Ton signe astrologique ?</legend>
+      <label
+        ><input
+          type="radio"
+          name="q8"
+          data-scores='{"matcha ananas":2,"matcha mangue":1}'
+        />
+        Capricorne, Verseau, Poissons.</label
+      ><br />
+      <label
+        ><input
+          type="radio"
+          name="q8"
+          data-scores='{"matcha myrtille":2,"matcha fraise":1}'
+        />
+        Bélier, Taureau, Gémeaux.</label
+      ><br />
+      <label
+        ><input
+          type="radio"
+          name="q8"
+          data-scores='{"matcha classique":2,"matcha pêche blanche":1}'
+        />
+        Cancer, Lion, Vierge.</label
+      ><br />
+      <label
+        ><input
+          type="radio"
+          name="q8"
+          data-scores='{"matcha framboise":2,"matcha gingembre":1}'
+        />
+        Balance, Scorpion, Sagittaire.</label
+      >
+    </fieldset>
+
+    <button id="btn">Voir mon résultat</button>
+    <script src="quiz.js"></script>
+    <script src="accueil.js"></script>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer">
+        <div class="footer-class">
+          <div id="footer-align-vertical">
+            <div id="footer-align-horizontal">
+              <div class="footer-col">
+                <h4>MATCHAT TEAM</h4>
+                <ul>
+                  <li><a href="#">A propos de nous</a></li>
+                  <li><a href="#">Nos produits</a></li>
+                  <li><a href="#">Nos bestsellers</a></li>
+                </ul>
+              </div>
+
+              <div class="footer-col">
+                <h4>A propos du site</h4>
+                <ul>
+                  <li><a href="#">Mentions Légales.</a></li>
+                  <li>
+                    <a href="#"
+                      >Toutes les images de ce site <br />sont générés par
+                      l'IA.</a
+                    >
+                  </li>
+                  <li><a href="#">Politiques des matchats</a></li>
+                </ul>
+              </div>
+
+              <div class="footer-col">
+                <h4>A propos de nous</h4>
+                <ul>
+                  <li>
+                    Le ✨Café Matchat✨ <br />
+                    Vos boissons favorites, vos patisseries pref et nos boites
+                    de matcha aux saveurs inédites ! <br />
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <p id="Copyright">Copyright © 2025 Matchat Team.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- FOOTER -->
+  </body>
+</html>

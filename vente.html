@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matchat</title>
+    <link rel="stylesheet" href="vente.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <img
+        id="matchatLogo"
+        src="https://i.imgur.com/zWkTGqX.png"
+        alt="matchatLogo"
+      />
+      <ul id="navList">
+        <li class="navElement"><a href="accueil.html">Accueil</a></li>
+        <li class="navElement"><a href="vente.html">Produits</a></li>
+        <li class="navElement"><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- HERO -->
+    <div class="hero">
+      <h1>Nos matchas</h1>
+    </div>
+    <!-- /div hero -->
+
+    <section class="explications">
+      <div class="explain-container">
+        <div class="selec-explain">
+          <h1 class="title-explain">Notre manière de faire</h1>
+          <p>
+            Tout commence par le choix méticuleux des matières premières. Nos
+            feuilles de thé proviennent de petites plantations japonaises où la
+            culture du matcha respecte des méthodes durables. Nous sélectionnons
+            ensuite des fruits et légumes de saison, issus de l’agriculture
+            locale quand cela est possible — ananas, pomme, betterave,ou encore
+            carotte — choisis pour leur richesse en goût et en nutriments.
+          </p>
+        </div>
+        <p class="border-top"></p>
+        <div class="fin-explain">
+          <h1 class="title-explain">Notre éthique</h1>
+          <p>
+            Les poudres sont enfin conditionnées à la main dans des pots en
+            verre recyclables, garantissant une conservation optimale des
+            arômes. Chaque pot est numéroté et scellé, symbole de notre
+            engagement pour une production limitée, artisanale et respectueuse.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conteneur principal : 1/3 filtres, 2/3 cards -->
+    <div class="matcha-container">
+      <!-- Sidebar avec les filtres -->
+      <div class="filtres">
+        <button
+          class="btn-open"
+          aria-haspopup="dialog"
+          aria-controls="cartModal"
+        >
+          Mon panier
+        </button>
+        <div class="filtre-group">
+          <h2>Filtrer par :</h2>
+
+          <div class="aromes">
+            <h3>Arômes</h3>
+            <label
+              ><input type="checkbox" name="arome" value="fruit" />Fruit</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="arome"
+                value="legume"
+              />Légume</label
+            >
+          </div>
+
+          <div class="qualitys">
+            <h3>Qualité</h3>
+            <label
+              ><input
+                type="checkbox"
+                name="quality"
+                value="prenium"
+              />Prenium</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="quality"
+                value="deluxe"
+              />Deluxe</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="quality"
+                value="ultra-deluxe"
+              />Ultra deluxe</label
+            >
+          </div>
+        </div>
+        <!-- /div filtre-group -->
+      </div>
+
+      <!-- <button class="btn-open" aria-haspopup="dialog" aria-controls="cartModal">
+            Mon panier 
+        </button> -->
+
+      <section class="modal hidden" id="cartModal">
+        <div class="modal-header">
+          <button class="btn-close" aria-label="Fermer le panier">⨉</button>
+          <div class="excuses">
+            <h3 id="cartTitle">Votre Panier</h3>
+            <ul id="listePanier"></ul>
+            <p>Désolée je n'ai pas les competences requises</p>
+            <p id="totalPanier">Vous n'avez pas d'aticles</p>
+            <button
+              class="buy-btn"
+              onclick="location.href=`https://www.palaisdesthes.com/fr/thes/matcha/`"
+            >
+              Payer
+            </button>
+            <img id="chat" src="img/chat-triste.png" />
+          </div>
+        </div>
+
+        <ul
+          id="cartItems"
+          class="cart-items"
+          aria-live="polite"
+          aria-relevant="additions removals"
+        ></ul>
+      </section>
+      <div class="overlay hidden"></div>
+
+      <div class="cards" id="productList">
+        <article
+          class="card-item"
+          data-product-id="fraise-001"
+          data-arome="fruit"
+          data-quality="deluxe"
+        >
+          <img src="img/pot/matchafraise.png" alt="Fraise" class="img" />
+          <h2 class="title-1">Matcha fraise</h2>
+          <div class="cart">
+            <div class="item-price">34.99€</div>
+            <div class="btn-conatiner">
+              <button
+                class="btn"
+                id="produit1"
+                onclick="addToCart('0', 'Matcha Fraise', 34.99, 'img/pot/matchafraise.png')"
+                type="button"
+              >
+                Ajouter au panier
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="card-item"
+          data-product-id="pomme-002"
+          data-arome="fruit"
+          data-quality="prenium"
+        >
+          <img src="img/pot/applematcha.png" alt="pomme" class="img" />
+          <h2 class="title-1">Matcha Pomme</h2>
+          <div class="cart" href="#">
+            <div class="item-price">24.99€</div>
+            <div class="btn-conatiner">
+              <button
+                class="btn"
+                id="produit2"
+                onclick="addToCart('1', 'Matcha Pomme', 24.99, 'img/pot/applematcha.png')"
+                type="button"
+              >
+                Ajouter au panier
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="card-item"
+          data-product-id="carrot-003"
+          data-arome="legume"
+          data-quality="ultra-deluxe"
+        >
+          <img src="img/pot/carrotmatcha.png" alt="Fraise" class="img" />
+          <h2 class="title-1">Matcha Carotte</h2>
+          <div class="cart" href="#">
+            <div class="item-price">44.99€</div>
+            <div class="btn-conatiner">
+              <button
+                class="btn"
+                id="produit3"
+                onclick="addToCart('2', 'Matcha Carotte', 44.99, 'img/pot/carrotmatcha.png')"
+                type="button"
+              >
+                Ajouter au panier
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="card-item"
+          data-product-id="ginger-004"
+          data-arome="legume"
+          data-quality="deluxe"
+        >
+          <img src="img/pot/gingermatcha.png" alt="Fraise" class="img" />
+          <h2 class="title-1">Matcha Gingembre</h2>
+          <div class="cart" href="#">
+            <div class="item-price">34.99€</div>
+            <div class="btn-conatiner">
+              <button
+                class="btn"
+                id="produit4"
+                onclick="addToCart('3', 'Matcha Gingembre', 34.99, 'img/pot/gingermatcha.png')"
+                type="button"
+              >
+                Ajouter au panier
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="card-item"
+          data-product-id="betterave-005"
+          data-arome="legume"
+          data-quality="prenium"
+        >
+          <img src="img/pot/matchabetterave.png" alt="Fraise" class="img" />
+          <h2 class="title-1">Matcha Bettrave</h2>
+          <div class="cart" href="#">
+            <div class="item-price">24.99€</div>
+            <div class="btn-conatiner">
+              <button
+                class="btn"
+                id="produit5"
+                onclick="addToCart('4', 'Matcha Gingembre', 24.99, 'img/pot/matchabetterave.png')"
+                type="button"
+              >
+                Ajouter au panier
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="card-item"
+          data-product-id="blueberry-006"
+          data-arome="fruit"
+          data-quality="deluxe"
+        >
+          <img src="img/pot/matchablueberry.png" alt="blueberry" class="img" />
+          <h2 class="title-1">Matcha Myrtille</h2>
+          <div class="cart" href="#">
+            <div class="item-price">34.99€</div>
+            <div class="btn-conatiner">
+              <button
+                class="btn"
+                id="produit6"
+                onclick="addToCart('5', 'Matcha Myrtille', 34.99, 'img/pot/matchablueberry.png')"
+                type="button"
+              >
+                Ajouter au panier
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="card-item"
+          data-product-id="classic-007"
+          data-arome="fruit"
+          data-quality="ultra-deluxe"
+        >
+          <img src="img/pot/matchaclassic.png" alt="Fraise" class="img" />
+          <h2 class="title-1">Matcha Classique</h2>
+          <div class="cart" href="#">
+            <div class="item-price">44.99€</div>
+            <div class="btn-conatiner">
+              <button
+                class="btn"
+                id="produit7"
+                onclick="addToCart('8', 'Matcha Classique', 44.99, 'img/pot/matchaclassic.png')"
+                type="button"
+              >
+                Ajouter au panier
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="card-item"
+          data-product-id="mango-008"
+          data-arome="fruit"
+          data-quality="prenium"
+        >
+          <img src="img/pot/matchamango.png" alt="Fraise" class="img" />
+          <h2 class="title-1">Matcha Mangue</h2>
+          <div class="cart" href="#">
+            <div class="item-price">24.99€</div>
+            <div class="btn-conatiner">
+              <button
+                class="btn"
+                id="produit8"
+                onclick="addToCart('9', 'Matcha Mangue', 24.99, 'img/pot/matchamango.png')"
+                type="button"
+              >
+                Ajouter au panier
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="card-item"
+          data-product-id="peach-009"
+          data-arome="fruit"
+          data-quality="prenium"
+        >
+          <img src="img/pot/matchatpeach.png" alt="Fraise" class="img" />
+          <h2 class="title-1">Matcha Pêche</h2>
+          <div class="cart" href="#">
+            <div class="item-price">24.99€</div>
+            <div class="btn-conatiner">
+              <button
+                class="btn"
+                id="produit9"
+                onclick="addToCart('10', 'Matcha Peche', 24.99, 'img/pot/matchatpeach.png')"
+                type="button"
+              >
+                Ajouter au panier
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="card-item"
+          data-product-id="strawberry-010"
+          data-arome="fruit"
+          data-quality="deluxe"
+        >
+          <img src="img/pot/matchatraspberry.png" alt="Fraise" class="img" />
+          <h2 class="title-1">Matcha Framboise</h2>
+          <div class="cart" href="#">
+            <div class="item-price">34.99€</div>
+            <div class="btn-conatiner">
+              <button
+                class="btn"
+                id="produit10"
+                onclick="addToCart('11', 'Matcha Framboise', 34.99, 'img/pot/matchatraspberry.png')"
+                type="button"
+              >
+                Ajouter au panier
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="card-item"
+          data-product-id="pineapple-011"
+          data-arome="fruit"
+          data-quality="deluxe"
+        >
+          <img src="img/pot/pineapplematcha.png" alt="Fraise" class="img" />
+          <h2 class="title-1">Matcha Ananas</h2>
+          <div class="cart" href="#">
+            <div class="item-price">34.99€</div>
+            <div class="btn-conatiner">
+              <button
+                class="btn"
+                id="produit11"
+                onclick="addToCart('12', 'Matcha Ananas', 34.99, 'img/pot/pineapplematcha.png')"
+                type="button"
+              >
+                Ajouter au panier
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="card-item"
+          data-product-id="pear-012"
+          data-arome="fruit"
+          data-quality="prenium"
+        >
+          <img src="img/pot/pearmatcha.png" alt="Fraise" class="img" />
+          <h2 class="title-1">Matcha Poire</h2>
+          <div class="cart" href="#">
+            <div class="item-price">34.99€</div>
+            <div class="btn-conatiner">
+              <button
+                class="btn"
+                id="produit12"
+                onclick="addToCart('13', 'Matcha Poire', 34.99, 'img/pot/pearmatcha.png')"
+                type="button"
+              >
+                Ajouter au panier
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+      <!-- /div cards-->
+    </div>
+    <!-- /div matcha container -->
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer">
+        <div class="footer-class">
+          <div id="footer-align-vertical">
+            <div id="footer-align-horizontal">
+              <div class="footer-col">
+                <h4>MATCHAT TEAM</h4>
+                <ul>
+                  <li><a href="#">A propos de nous</a></li>
+                  <li><a href="#">Nos produits</a></li>
+                  <li><a href="#">Nos bestsellers</a></li>
+                </ul>
+              </div>
+
+              <div class="footer-col">
+                <h4>A propos du site</h4>
+                <ul>
+                  <li><a href="#">Mentions Légales.</a></li>
+                  <li>
+                    <a href="#"
+                      >Toutes les images de ce site <br />sont générés par
+                      l'IA.</a
+                    >
+                  </li>
+                  <li><a href="#">Politiques des matchats</a></li>
+                </ul>
+              </div>
+
+              <div class="footer-col">
+                <h4>A propos de nous</h4>
+                <ul>
+                  <li>
+                    Le ✨Café Matchat✨ <br />
+                    Vos boissons favorites, vos patisseries pref et nos boites
+                    de matcha aux saveurs inédites ! <br />
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <p id="Copyright">Copyright © 2025 Matchat Team.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- FOOTER -->
+
+    <script src="vente.js"></script>
+  </body>
+</html>

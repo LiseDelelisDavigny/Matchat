@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- lien CSS -->
+    <link rel="stylesheet" href="contact.css" />
+    <!-- titre d'onglet -->
+    <title>MATCHAT - Contact</title>
+    <!-- logo -->
+    <link rel="icon" type="image/png" href="" />
+    <!--font titre principal et entrée-->
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav id="navbar">
+      <img
+        id="matchatLogo"
+        src="https://i.imgur.com/zWkTGqX.png"
+        alt="matchatLogo"
+      />
+      <ul id="navList">
+        <li class="navElement"><a href="accueil.html">Accueil</a></li>
+        <li class="navElement"><a href="vente.html">Produits</a></li>
+        <li class="navElement"><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- NAVBAR -->
+
+    <!-- BANNIERE CONTACT -->
+    <section id="bannière">
+      <h1 class="contact-title">NOUS CONTACTER</h1>
+      <p class="contact-subtitle">
+        Une question, une remarque, une envie de nous écrire ?
+      </p>
+      <a href="#form" class="bouton_cta">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path
+            d="M12 5v14M5 12l7 7 7-7"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </a>
+    </section>
+    <!-- BANNIERE CONTACT -->
+
+    <!-- FORMULAIRE -->
+    <section>
+      <h2 class="section-titre">FORMULAIRE</h2>
+      <form
+        id="form"
+        class="form-contact"
+        onsubmit="alert('Formulaire envoyé (exemple)'); return false;"
+      >
+        <label for="name">Nom</label>
+        <input id="name" name="name" type="text" placeholder="Nom" required />
+
+        <label for="name">Prénom</label>
+        <input
+          id="surname"
+          name="surname"
+          type="text"
+          placeholder="Prenom"
+          required
+        />
+
+        <label for="email">Email</label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          placeholder="Email@exemple.com"
+          required
+        />
+
+        <label for="num">Numero</label>
+        <input
+          id="number"
+          name="number"
+          type="text"
+          placeholder="Numéro de Telephone"
+          required
+        />
+
+        <label for="pet-select">Sujet</label>
+        <select name="sujet" id="pet-select">
+          <option value="">-- À quel sujet ? --</option>
+          <option value="rdv">Demande de rendez-vous</option>
+          <option value="quest">Question pratique</option>
+          <option value="hamster">Nos articles</option>
+          <option value="parrot">Autre</option>
+        </select>
+
+        <!-- mettre une data et ajouter un if pour avoir java -->
+
+        <select name="matcha" id="matcha-select">
+          <option value="">-- Quel Matcha ? --</option>
+          <option value="matcha1">Matcha fraise</option>
+          <option value="matcha2">Matcha framboise</option>
+          <option value="matcha3">Matcha mangue</option>
+          <option value="matcha4">Matcha myrtille</option>
+          <option value="matcha5">Matcha gingembre</option>
+          <option value="matcha6">Matcha pêche blanche</option>
+          <option value="matcha7">Matcha ananas</option>
+          <option value="matcha8">Matcha pomme</option>
+          <option value="matcha9">Matcha carotte</option>
+          <option value="matcha10">Matcha betterave</option>
+          <option value="matcha11">Matcha poire</option>
+          <option value="matcha12">Matcha classique</option>
+        </select>
+
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="6"
+          placeholder="Message .. "
+          required
+        ></textarea>
+
+        <button id="submit" type="submit">Envoyer</button>
+      </form>
+    </section>
+    <!-- Formulaire -->
+
+    <!-- RESEAUX -->
+    <section class="section-reseaux">
+      <h2 class="section-titre2">RÉSEAUX</h2>
+      <ul class="liste-reseaux" aria-label="Nos réseaux sociaux">
+        <li>
+          <a href="#" data-platform="instagram" aria-label="Instagram">
+            <span class="icon" aria-hidden="true"></span
+            ><span class="label">Instagram</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" data-platform="youtube" aria-label="YouTube">
+            <span class="icon" aria-hidden="true"></span
+            ><span class="label">YouTube</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" data-platform="linkedin" aria-label="LinkedIn">
+            <span class="icon" aria-hidden="true"></span
+            ><span class="label">LinkedIn</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" data-platform="facebook" aria-label="Facebook">
+            <span class="icon" aria-hidden="true"></span
+            ><span class="label">Facebook</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.twitch.tv/yukosmile"
+            data-platform="twitch"
+            aria-label="Twitch"
+          >
+            <span class="icon" aria-hidden="true"></span
+            ><span class="label">Twitch</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <!-- RESEAUX -->
+
+    <!-- FOOTER -->
+    <footer>
+      <!-- FOOTER -->
+      <footer>
+        <div class="footer">
+          <div class="footer-class">
+            <div id="footer-align-vertical">
+              <div id="footer-align-horizontal">
+                <div class="footer-col">
+                  <h4>MATCHAT TEAM</h4>
+                  <ul>
+                    <li><a href="#">A propos de nous</a></li>
+                    <li><a href="#">Nos produits</a></li>
+                    <li><a href="#">Nos bestsellers</a></li>
+                  </ul>
+                </div>
+
+                <div class="footer-col">
+                  <h4>A propos du site</h4>
+                  <ul>
+                    <li><a href="#">Mentions Légales.</a></li>
+                    <li>
+                      <a href="#"
+                        >Toutes les images de ce site <br />sont générés par
+                        l'IA.</a
+                      >
+                    </li>
+                    <li><a href="#">Politiques des matchats</a></li>
+                  </ul>
+                </div>
+
+                <div class="footer-col">
+                  <h4>A propos de nous</h4>
+                  <ul>
+                    <li>
+                      Le ✨Café Matchat✨ <br />
+                      Vos boissons favorites, vos patisseries pref et nos boites
+                      de matcha aux saveurs inédites ! <br />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <p id="Copyright">Copyright © 2025 Matchat Team.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- FOOTER -->
+    </footer>
+    <!-- FOOTER -->
+
+    <script src="contact.js"></script>
+  </body>
+</html>

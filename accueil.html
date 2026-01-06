@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="accueil.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MATCHAT - Accueil</title>
+    <link rel="icon" href="logoMatchatFull.png" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <img
+        id="matchatLogo"
+        src="https://i.imgur.com/zWkTGqX.png"
+        alt="matchatLogo"
+      />
+      <ul id="navList">
+        <li class="navElement"><a href="accueil.html">Accueil</a></li>
+        <li class="navElement"><a href="vente.html">Produits</a></li>
+        <li class="navElement"><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!--Poti chat + popup-->
+    <a href="#pseudo">
+      <div id="quizzCat">
+        <img
+          src="https://i.imgur.com/WtI4HK6.gif"
+          id="matchatCat"
+          alt=""
+        /></div
+    ></a>
+    <p id="matchatPopup">viens tester notre quizz !</p>
+    <!--Poti chat + popup-->
+
+    <!--VRAI CAROUSEL // TEST -->
+
+    <div class="carousel-container">
+      <div class="carousel_items">
+        <div class="carousel_item item1"></div>
+        <div class="carousel_item item2"></div>
+        <div class="carousel_item item3"></div>
+      </div>
+    </div>
+    <h1 id="carouselTitle">CAFÉ MATCHAT</h1>
+    <!--VRAI CAROUSEL // TEST -->
+
+    <!-- Carousel -->
+
+    <!-- Section "présentation" -->
+    <div class="separatorContener">
+      <hr class="separator2" />
+      <h1 class="separatorTitle">QUI SOMMES-NOUS ?</h1>
+    </div>
+
+    <div id="presentationContener">
+      <div id="presentationImg"></div>
+      <div id="presentationText">
+        <p class="presentationPara">
+          <strong>Hello ! Nous c'est le ✨Café Matchat✨</strong> <br />
+          <br />
+          le café où l’amour du matcha rencontre la douceur des chats ! Venez
+          savourer nos boissons et pâtisseries maison, préparées avec du matcha
+          aux saveurs inédites, dans une ambiance apaisante et féline. Pour
+          prolonger l’expérience chez vous, découvrez notre boutique en ligne,
+          livrés directement à votre porte !
+        </p>
+      </div>
+    </div>
+    <!-- Section "présentation" -->
+
+    <!-- Section best sellers -->
+    <div class="separatorContener">
+      <hr class="separatortop" />
+      <h1 class="separatorTitle2">BEST SELLERS</h1>
+    </div>
+    <div class="background">
+      <div id="bestSellersContent">
+        <div class="sellerCard">
+          <img class="cardImg" src="https://i.imgur.com/TAlsZ95.png" alt="" />
+          <h1>ITS BERRY GOOD !</h1>
+
+          <hr class="separator3" />
+          <br />
+          <p class="cardText">Un délicieux matcha aromatisé à la fraise..</p>
+
+          <!--Bouton pour ajouter le produit au panier (supposément?)-->
+          <button onclick="location.href=`vente.html`" ; class="productButton">
+            Acheter
+          </button>
+        </div>
+
+        <div class="sellerCard">
+          <img class="cardImg" src="https://i.imgur.com/kQTdDtI.png" alt="" />
+          <h1>MANGO GO GO !</h1>
+          <hr class="separator3" />
+          <br />
+          <p class="cardText">
+            Un matcha aromatisé à la mangue, ravivant la passion et l'envie de
+            voyager..
+          </p>
+
+          <!--Bouton pour ajouter le produit au panier (supposément?)-->
+          <button onclick="location.href=`vente.html`" ; class="productButton">
+            Acheter
+          </button>
+        </div>
+
+        <div class="sellerCard">
+          <img class="cardImg" src="https://i.imgur.com/00BQkPu.png" alt="" />
+          <h1>GIVE ME THE BLUES !</h1>
+          <hr class="separator3" />
+          <br />
+          <p class="cardText">
+            Un mélange de matcha et de myrtilles, délicieusement nostalgique
+          </p>
+
+          <!--Bouton pour ajouter le produit au panier (supposément?)-->
+          <button onclick="location.href=`vente.html`" ; class="productButton">
+            Acheter
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section best sellers -->
+
+    <div class="separatorContener">
+      <hr class="separatorbottom" />
+      <h1 class="separatorTitle2">OÙ SOMMES NOUS ?</h1>
+    </div>
+
+    <div id="localisation">
+      <div id="mapsContener">
+        <iframe
+          id="mapsPlacement"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5061.3614249630355!2d3.0153003923616293!3d50.63304790105138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2d55c764ab439%3A0x2e9bfd5c48d283b!2sEuraTechnologies!5e0!3m2!1sfr!2sfr!4v1761658716460!5m2!1sfr!2sfr"
+          width="700"
+          height="600"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+
+        <div id="locationInfos">
+          <h1 id="locationInfosTitle">NOTRE ADRESSE</h1>
+
+          <p class="locationInfosText">
+            165 avenue de Bretagne 59000, Lille <br /><br />
+            Métro : ligne 2 - Arrêts Canteleu / Bois-Blancs
+            <br /><br />
+            Contact : voir page
+            <a id="locationLink" href="contact">contact</a>
+          </p>
+
+          <img id="imgLocation" src="https://i.imgur.com/U8L0p0C.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <!--Quizz-->
+    <div class="separatorContener">
+      <hr class="separator2" />
+      <h1 class="separatorTitle">TESTE NOTRE QUIZZ !</h1>
+    </div>
+
+    <div id="quizzContent">
+      <div id="quizzRedirect">
+        <h1 class="quizzTitle">TU VEUX SAVOIR QUEL MATCHA TU ES ?</h1>
+        <hr class="separator" />
+        <p class="quizzPara">
+          <strong>✨ Viens tester notre nouveau quizz ici ! ✨</strong><br />
+          <br />
+          Nous avons ce petit bijou créé par Magda alias Madgoat à vous faire
+          essayer, n'hésitez pas à nous faire des feedbacks !
+        </p>
+
+        <!-- le champ pour écrire le pseudo -->
+        <input
+          id="pseudo"
+          type="text"
+          placeholder="Ex : Toto"
+          minlength="3"
+          maxlength="15"
+          required
+        />
+
+        <!-- bouton pour commencer -->
+        <button id="start">Commencer</button>
+        <img
+          id="dancingCat"
+          src="https://i.imgur.com/S3fILro.gif"
+          alt="dancingMascott"
+        />
+      </div>
+    </div>
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer">
+        <div class="footer-class">
+          <div id="footer-align-vertical">
+            <div id="footer-align-horizontal">
+              <div class="footer-col">
+                <h4>MATCHAT TEAM</h4>
+                <ul>
+                  <li><a href="#">A propos de nous</a></li>
+                  <li><a href="#">Nos produits</a></li>
+                  <li><a href="#">Nos bestsellers</a></li>
+                </ul>
+              </div>
+
+              <div class="footer-col">
+                <h4>A propos du site</h4>
+                <ul>
+                  <li><a href="#">Mentions Légales.</a></li>
+                  <li>
+                    <a href="#"
+                      >Toutes les images de ce site <br />sont générés par
+                      l'IA.</a
+                    >
+                  </li>
+                  <li><a href="#">Politiques des matchats</a></li>
+                </ul>
+              </div>
+
+              <div class="footer-col">
+                <h4>A propos de nous</h4>
+                <ul>
+                  <li>
+                    Le ✨Café Matchat✨ <br />
+                    Vos boissons favorites, vos patisseries pref et nos boites
+                    de matcha aux saveurs inédites ! <br />
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <p id="Copyright">Copyright © 2025 Matchat Team.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- FOOTER -->
+    <script src="accueil.js"></script>
+  </body>
+</html>
